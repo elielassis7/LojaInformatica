@@ -5,6 +5,10 @@ generator client {
   provider = "prisma-client-js"
 }
 
+generator erd {
+  provider = "prisma-erd-generator"
+}
+
 datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
@@ -13,17 +17,66 @@ datasource db {
 model Client {
   id         String   @id @default(uuid())
   name       String
-  created_at DateTime
+  email      String   @unique
+  phone      String
+  message    String
+  created_at DateTime @default(now())
+  Adress     Adress?
 
   @@map("clients")
 }
 
 model Adress {
-  id         String @id @default(uuid())
-  street     String
-  number     Int
-  complement String
-  district   String
+  id          String @id @default(uuid())
+  street      String
+  number      Int
+  complement  String
+  district    String
+  city        String
+  state       String
+  postal_code String
+  client_id   String @unique
+
+  client Client @relation(fields: [client_id], references: [id])
 
   @@map("adresses")
+}
+
+model Admin {
+  id    Int     @id @default(autoincrement())
+  name  String
+  cargo String?
+
+  log log[]
+
+  @@map("admins")
+}
+
+model Service {
+  id          Int    @id @default(autoincrement())
+  name        String
+  description String
+
+  @@map("services")
+}
+
+model log {
+  id       String   @id @default(uuid())
+  admin_id Int
+  date     DateTime @default(now())
+  changes  String
+  others   String
+
+  admin Admin @relation(fields: [admin_id], references: [id])
+
+  @@map("logs")
+}
+
+model image {
+  id       String @id @default(uuid())
+  publicId String @unique
+  format   String
+  version  String
+
+  @@map("images")
 }
