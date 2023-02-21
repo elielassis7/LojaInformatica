@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Carrossel</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-heading">
+            Responsive Carousel using CSS
+        </h1>
+          
+        <div class="content">
+  
+            <!-- The content which is placed at 
+                the center of the carousel -->
+            <div class="carousel-content">
+                <h1 class="carousel-heading">
+                    GeeksforGeeks
+                </h1>
+                <h3>A computer science portal for geeks</h3>
+            </div>
+            <div class="slideshow">
+                  
+                <!-- carousel control buttons -->
+                <button class="slide-btn slide-btn-R"></button>
+                <button class="slide-btn slide-btn-L"></button>
+                
+  
+                <!-- carousel wrapper which contains all images -->
+                <div class="slideshow-wrapper">
+                    <div class="slide">
+                        <img class="slide-img"
+                            src=
+                            "https://media.geeksforgeeks.org/wp-content/uploads/20210818140124/image1.png">
+                    </div>
+                    <div class="slide">
+                        <img class="slide-img"
+                            src=
+                            "https://media.geeksforgeeks.org/wp-content/uploads/20210818140126/image2.png">
+                    </div>
+                    <div class="slide">
+                        <img class="slide-img"
+                            src=
+                            "https://media.geeksforgeeks.org/wp-content/uploads/20210818190339/image5.png">
+                    </div>
+                    <div class="slide">
+                        <img class="slide-img"
+                            src=
+                            "https://media.geeksforgeeks.org/wp-content/uploads/20210818141837/image4.png">
+                    </div>
+                    <div class="slide">
+                        <img class="slide-img"
+                            src=
+                            "https://media.geeksforgeeks.org/wp-content/uploads/20210818140124/image1.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
+<!--code carounssel-->
+
+<div className="w-full h-80">
+    <div className="flex flex-col justify-center items-center mx-auto w-[82rem] h-[50rem]">
+        
+      <div className="relative">
+        <div className="absolute top-0 left-3 translate-x-0 -translate-y-1/4 text-center z-50">
+          <h1 className="text-3xl text-zinc-800 mb-4">
+            Loja de Informatica
+          </h1>
+          <h3>Soluções em Hardware para você e sua empresa</h3>
+        </div>
+        <div className="h-full overflow-hidden">
+          <button className="slide-btn slide-btn-R"></button>
+          <button className="slide-btn slide-btn-L"></button>
+          
+          <div className="slideshow-wrapper">
+                
+            <div className="w-full h-full">
+              <img className="w-full h-full object-cover" src={imageServicos}/>
+            </div>
+            
+            <div className="w-full h-full">
+              <img className="w-full h-full object-cover" src={imageOrcamento}/>
+            </div>
+                  
+            <div className="w-full h-full">
+              <img className="w-full h-full object-cover" src={imageLoja}/>
+            </div>
+            
+            <div className="w-full h-full">
+              <img className="w-full h-full object-cover" src={imageSobre}/>
+            </div>
+              
+            <div className="w-full h-full">
+              <img className="w-full h-full object-cover" src={imageSocial}/>
+            </div>
+          
+          </div>
+        
+        </div>
+      </div>
+    
+    </div>
+  </div>
+

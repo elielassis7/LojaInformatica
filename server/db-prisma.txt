@@ -1,0 +1,4 @@
+run command "migrate reset"
+
+source - https://www.prisma.io/docs/reference/api-reference/command-reference#migrate-reset
+

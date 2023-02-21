@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slideshow-wrapper {
+  position: relative;
+  animation: slideshow 25s infinite;
+}
+
+@keyframes slideshow {
+  0% {
+    left: 6rem;
+  }
+
+  15% {
+    left: 6rem;
+  }
+
+  19% {
+    left: -46rem;
+  }
+
+  34% {
+    left: -46rem;
+  }
+
+  38% {
+    left: -98rem;
+  }
+
+  53% {
+    left: -98rem;
+  }
+
+  57% {
+    left: -150rem;
+  }
+  72% {
+    left: -150rem;
+  }
+  76% {
+    left: -202rem;
+  }
+  93%{
+    left:-202rem;
+  }
+  100% {
+    left: 6rem;
+  }
+}
+
+.slide-btn {
+  background-color: #bbb;
+  border-radius: 50%;
+  border: .2rem solid #d38800;
+  width: 1.2rem;
+  height: 1.2rem;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 70;
+}
+
+.slide-btn-R {
+  left: 45%;
+}
+
+.slide-btn-L {
+  left: 50%;
+}
+
+
+.slide-btn-R:focus~.slideshow-wrapper {
+  animation: none;
+  left: 0;
+}
+
+.slide-btn-L:focus~.slideshow-wrapper {
+  animation: none;
+  left: -100%;
+}
+
+
+.slide-btn:focus {
+  background-color: #308d46;
+}
