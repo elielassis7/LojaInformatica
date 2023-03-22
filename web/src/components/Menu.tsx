@@ -1,3 +1,4 @@
+import { Link, Navigate, useNavigate } from "react-router-dom"
 
 
 
@@ -24,18 +25,41 @@ export const paths = [
   },
   ]
 
+ 
 
 export function Menu(){
   return (
-    <div className="bg-blue-500 w-full text-white h-12 text-lg">
+    <div className="bg-blue-500 w-full text-white h-10 text-lg">
         <ul className="flex flex-row justify-between gap-10 mx-12 mt-1">
-          {paths.map(p  => (
-            <li key={p.name}>
-              {p.name}
-            </li>
-          ))}
+          {
+            paths.map(i => (
+              <li key={i.name}>
+                <Link to={i.path}>{i.name}</Link>
+              </li>  
+            ))
+          }
+          
+
         </ul>
 
       </div>
   )
 }
+
+/*
+          <li>
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link to={"/service"}>Serviços</Link>
+          </li>
+          <li>
+            <Link to={"/store"}>Loja</Link>
+          </li>
+          <li>
+            <Link to={"/contact"}>Contato</Link>
+          </li>
+          <li>
+            <Link to={"/about"}>Sobre nós</Link>
+          </li>
+          */

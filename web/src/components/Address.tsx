@@ -1,9 +1,9 @@
-import PinImage from '../assets/map_pin.png'
+import { MapPin } from 'phosphor-react'
 
 export function Address(){
   return (
-    <div className="flex flex-row h-20 gap-2 translate-x-3/4">
-      <img src={PinImage} alt="pin de mapa"  className='w-15 h-15'/>
+    <div className="flex flex-row h-20 gap-2">
+      <MapPin size={32} color='#187da9'  className='mt-2'/>
       <p className='text-white font-sl'>Av Brasil, nº 100<br/>Maringa-PR</p>
     </div>
   )

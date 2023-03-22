@@ -93,3 +93,11 @@
 .slide-btn:focus {
   background-color: #308d46;
 }
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+
+.slick-list{
+  margin: 0 10px;
+}

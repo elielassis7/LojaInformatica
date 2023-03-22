@@ -1,13 +1,13 @@
-import { Slider } from "../components/Slider";
-import {Map} from '../components/Map'
+import { CopyRight } from "../components/CopyRight";
+import { Footer } from "../components/Footer";
 
-export default function Home(){
+export default function Store(){
   return(
     <div>
-      <Slider/>
+      <h1>Loja</h1>
      
-      
-      <Map/>
+      <Footer/>
+      <CopyRight/>
     </div>
   )
 }
